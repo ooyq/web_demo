@@ -30,7 +30,7 @@ input[type=range] {
 hr {
     border: 0;
     border-top: 1px solid rgba(128, 128, 128, .2);
-    margin: 40px auto 20px;
+    margin: 20px auto 20px;
     width: 50%;
     max-width: 400px;
 }
@@ -70,7 +70,7 @@ input[type="search"]::-webkit-input-placeholder {
 
 .welcome-box {
     text-align: center;
-    padding: 50px 25px 100px;
+    padding: 50px 0px 0px 0px;
 }
 
 .point {
@@ -217,7 +217,7 @@ ul {
     display: inline-block;
     width: 25px;
     height: 15px;
-    background: url(/static/images/off_on.png) no-repeat 0 0;
+    background: url(/images/off_on.png) no-repeat 0 0;
     cursor: pointer
 }
 
@@ -602,13 +602,14 @@ header .animated2 .bottom {
 }
 
 .footer {
+    position: absolute;
+    bottom: 0px;
     width: 100%;
     font-size: 13px;
-    padding-top: 15px;
-    margin-top: -5%;
-    height: 50px;
+    /* padding-top: 15px; */
+    /* margin-top: -5%; */
+    /* height: 50px; */
     text-align: center;
-    z-index: 9999;
     color: #959595
 }
 
