@@ -43,3 +43,37 @@ const onScroll = (_) => {
 };
 window.addEventListener("scroll", onScroll);
 onScroll();
+
+
+
+// 爱心
+var heart = $("<div>").attr('class', 'heart');
+var winHeight = $(document).height();
+var winWidth = $(document).width();
+setInterval(() => {
+    var lovetime = 4000 + 10000 * Math.random(); //动画飘落时间
+    heart.clone().appendTo($("main")).css({
+        "top": "-50px",
+        "left": Math.random() * (winWidth - 50) + 'px'
+    }).animate({
+        "top": (winHeight) + 'px',
+        "left": Math.random() * (winWidth - 50) + 'px'
+    }, lovetime, function () {
+        $(this).remove()
+    })
+}, 100);
+
+// 背景音乐
+function audioAutoPlay(id) {
+    var audio = document.getElementById(id),
+        play = function () {
+            audio.play();
+            document.removeEventListener("touchstart", play, false);
+        };
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {//微信
+        play();
+    }, false);
+    document.addEventListener("touchstart", play, false);
+}
+audioAutoPlay('music');
