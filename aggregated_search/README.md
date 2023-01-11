@@ -6,4 +6,4 @@
 3. 记住选择的默认搜索引擎 
 
 
-#### [源代码地址](https://github.com/yitd/juso.vip)
+#### [源仓库地址](https://github.com/yitd/juso.vip)
